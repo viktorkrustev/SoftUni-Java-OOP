@@ -1,0 +1,25 @@
+package InterfacesAndAbstractionLab.Ferrari_06;
+
+public class Ferrari implements Car{
+    private String driverName;
+    private String model;
+
+    public Ferrari(String driverName) {
+        this.driverName = driverName;
+    }
+
+    @Override
+    public String brakes() {
+        return "Brakes!";
+    }
+
+    @Override
+    public String gas() {
+        return "brum-brumbrum-brrrrr";
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s/%s/%s/%s",Car.MODEL, brakes(), gas(), this.driverName);
+    }
+}
